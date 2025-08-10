@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Username Generator</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="theme-switch-container">
+            <label class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+            </label>
+            <span id="theme-label">Dark Mode</span>
+        </div>
+
+        <h1>Username Generator</h1>
+        <p class="subtitle" id="subtitle">
+            This page is completely and utterly vibe-coded. Pin all blame on
+            DeepSeek, I just needed a username generator rq
+        </p>
+
+        <div class="container">
+            <div class="input-group">
+                <label for="mask">Mask Pattern:</label>
+                <input type="text" id="mask" placeholder="Enter mask pattern (e.g., Cvcv#)" />
+            </div>
+            <button id="generate">Generate Username</button>
+            <div id="result"></div>
+
+            <div class="input-group">
+                <label for="history">Generation History:</label>
+                <textarea id="history" readonly></textarea>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>Mask Pattern Guide</h3>
+            <p><strong>Valid characters:</strong></p>
+            <p><strong>C</strong> - uppercase consonant</p>
+            <p><strong>c</strong> - lowercase consonant</p>
+            <p><strong>V</strong> - uppercase vowel</p>
+            <p><strong>v</strong> - lowercase vowel</p>
+            <p><strong>#</strong> - random digit (0-9)</p>
+            <p><strong>%</strong> - escape next character (treat as literal)</p>
+            <p><strong>3n</strong> - repeat next character</p>
+            <p><strong>Examples:</strong></p>
+            <ul>
+                <li>"Cvcvc#" → "Susan5"</li>
+                <li>"3#" → "777"</li>
+                <li>"2V3#" → "AA777"</li>
+                <li>"4%_" → "____"</li>
+            </ul>
+            <p><em>Press Enter after typing your pattern to generate instantly</em></p>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
